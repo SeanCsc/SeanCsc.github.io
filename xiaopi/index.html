@@ -180,6 +180,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">最佳实践</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">markdown</a>
     </li>
     
@@ -188,11 +192,6 @@
 
     
     <nav id="title-list-nav">
-        
-        <a class="" href="/2019/01/30/hello-world/" data-tag="" data-author="">
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-01-30 21:36:58">2019/01/30</span>
-        </a>
         
         <a class="运动表现 " href="/2019/02/02/ACE-CPT-1/" data-tag="ace" data-author="">
             <span class="post-title" title="ACE-CPT(1)">ACE-CPT(1)</span>
@@ -204,13 +203,18 @@
             <span class="post-date" title="2019-02-02 10:24:21">2019/02/02</span>
         </a>
         
+        <a class="" href="/2019/01/30/hello-world/" data-tag="" data-author="">
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-01-30 21:36:58">2019/01/30</span>
+        </a>
+        
         <a class="效率 " href="/2019/02/01/hexo开发日志-持续更新/" data-tag="hexo" data-author="">
             <span class="post-title" title="hexo开发日志-持续更新">hexo开发日志-持续更新</span>
             <span class="post-date" title="2019-02-01 20:50:13">2019/02/01</span>
         </a>
         
-        <a class="效率 " href="/2019/02/02/最佳实践/" data-tag="总结" data-author="">
-            <span class="post-title" title="最佳实践-持续更新">最佳实践-持续更新</span>
+        <a class="效率 " href="/2019/02/02/最佳实践/" data-tag="总结,最佳实践" data-author="">
+            <span class="post-title" title="最佳实践">最佳实践</span>
             <span class="post-date" title="2019-02-02 11:50:32">2019/02/02</span>
         </a>
         
@@ -322,7 +326,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#hexo','#总结','#markdown',],
+            'data': ['#ace','#hexo','#总结','#最佳实践','#markdown',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
