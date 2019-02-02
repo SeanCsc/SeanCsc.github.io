@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>markdown语言备忘 | Hexo</title>
-  <meta name="keywords" content=" markdown ">
-  <meta name="description" content="markdown语言备忘 | Hexo">
+  <title>hiveSQL的执行顺序以及hive优化 | Hexo</title>
+  <meta name="keywords" content=" hive ">
+  <meta name="description" content="hiveSQL的执行顺序以及hive优化 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="惊不惊喜？感不感动？">
 <meta property="og:type" content="website">
@@ -126,9 +126,11 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="效率"> 效率 </li>
-    
     <li data-rel="运动表现"> 运动表现 </li>
+    
+    <li data-rel="大数据"> 大数据 </li>
+    
+    <li data-rel="效率"> 效率 </li>
     
 </ul>
 <div class="left-bottom">
@@ -141,7 +143,7 @@
 
 
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="6">
+<input type="hidden" id="yelog_site_posts_number" value="7">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -168,15 +170,23 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">ace</a>
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">速查</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -193,11 +203,6 @@
     
     <nav id="title-list-nav">
         
-        <a class="效率 " href="/2019/02/01/hexo开发日志-持续更新/" data-tag="hexo" data-author="">
-            <span class="post-title" title="hexo开发日志-持续更新">hexo开发日志-持续更新</span>
-            <span class="post-date" title="2019-02-01 20:50:13">2019/02/01</span>
-        </a>
-        
         <a class="运动表现 " href="/2019/02/02/ACE-CPT-1/" data-tag="ace" data-author="">
             <span class="post-title" title="ACE-CPT(1)">ACE-CPT(1)</span>
             <span class="post-date" title="2019-02-02 09:16:33">2019/02/02</span>
@@ -208,9 +213,19 @@
             <span class="post-date" title="2019-02-02 10:24:21">2019/02/02</span>
         </a>
         
-        <a class="效率 " href="/2019/02/01/markdown语言使用/" data-tag="markdown" data-author="">
-            <span class="post-title" title="markdown语言备忘">markdown语言备忘</span>
+        <a class="大数据 " href="/2019/02/02/hiveSQL的执行顺序以及hive优化/" data-tag="hive" data-author="">
+            <span class="post-title" title="hiveSQL的执行顺序以及hive优化">hiveSQL的执行顺序以及hive优化</span>
+            <span class="post-date" title="2019-02-02 12:13:13">2019/02/02</span>
+        </a>
+        
+        <a class="效率 " href="/2019/02/01/markdown速查/" data-tag="markdown,速查" data-author="">
+            <span class="post-title" title="markdown语言速查">markdown语言速查</span>
             <span class="post-date" title="2019-02-01 20:53:44">2019/02/01</span>
+        </a>
+        
+        <a class="效率 " href="/2019/02/01/hexo开发日志-持续更新/" data-tag="hexo" data-author="">
+            <span class="post-title" title="hexo开发日志-持续更新">hexo开发日志-持续更新</span>
+            <span class="post-date" title="2019-02-01 20:50:13">2019/02/01</span>
         </a>
         
         <a class="" href="/2019/01/30/hello-world/" data-tag="" data-author="">
@@ -235,9 +250,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-markdown语言使用" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-hiveSQL的执行顺序以及hive优化" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">markdown语言备忘</h1>
+        <h1 class="article-title">hiveSQL的执行顺序以及hive优化</h1>
     
     <div class="article-meta">
         
@@ -245,21 +260,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="效率">效率</a>
+            <a href="javascript:" data-rel="大数据">大数据</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">markdown</a>
+            <a href="javascript:" class="color5">hive</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-02 11:28:01">2019-02-01 20:53</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-02 12:19:30">2019-02-02 12:13</time>
         
     </div>
     <div class="article-meta">
@@ -281,7 +296,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么是Markdown"><span class="toc-text">1. 什么是Markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-如何使用"><span class="toc-text">2. 如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加序列"><span class="toc-text">添加序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加代码片段"><span class="toc-text">添加代码片段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接和图片"><span class="toc-text">链接和图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入表格"><span class="toc-text">插入表格</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-常见错误"><span class="toc-text">3. 常见错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-编辑器"><span class="toc-text">4. 编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime"><span class="toc-text">Sublime</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typora"><span class="toc-text">typora</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -296,82 +311,42 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-什么是Markdown"><a href="#1-什么是Markdown" class="headerlink" title="1. 什么是Markdown"></a>1. 什么是Markdown</h2><p>Markdown是一种轻量级的标记语言，可以以纯文本的方式编辑文档，并以html格式发布。本文将记录平时会遇到的Markdown语法，便于以后查找。</p>
-<h2 id="2-如何使用"><a href="#2-如何使用" class="headerlink" title="2. 如何使用"></a>2. 如何使用</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
-<li><p>标题：根据#的多少决定标题的等级</p>
+        <p>前段时间在面试的时候被问了一道SQL执行顺序的题目，之前虽然写过很多sql,但是没有从一个更高的视角来看自己写的代码，更不要提该如何优化了。随着数据量的增大，掌握sql的执行原理并进行优化是一项非常必要的技能。这篇文章会对一个sql语句的执行顺序进行总结，并进一步推导出可以优化的点。</p>
+<p>因为工作时以hivesql为主，所以本文以hivesql进行讲解。<br>hive是基于Hadoop的Map Reduce<br>总体顺序：<br>from ..on .. join .. .. where .. select .. group by .. having .. order by</p>
+<hr>
+<p>在map阶段</p>
+<ol>
+<li><p>from 加载，进行表的查找和加载</p>
 </li>
-<li><p>强调： 前后加两个 *</p>
+<li><p>where过滤</p>
 </li>
-<li><p>斜体： 前后加一个 *</p>
+<li><p>select查询</p>
 </li>
-<li><p>删除线: 前后加两个 ～ ;  <del>eg</del></p>
+<li><p>group by 执行分组后的相关计算</p>
 </li>
-<li><p>转义符: \</p>
-</li>
-</ul>
-<h3 id="添加序列"><a href="#添加序列" class="headerlink" title="添加序列"></a>添加序列</h3><ul>
-<li><p>有序序列: 数字+.+空格</p>
-</li>
-<li><p>无序序列: +/-/* + 空格</p>
-</li>
-</ul>
-<h3 id="添加代码片段"><a href="#添加代码片段" class="headerlink" title="添加代码片段"></a>添加代码片段</h3><ul>
-<li>第一种方法： 代码片段上下各加三个 blockquote </li>
-</ul>
-<h3 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h3><ul>
-<li><p>插入链接:  [显示文本][链接地址]</p>
-</li>
-<li><p>插入图片: !+[]+(图片链接地址)</p>
-</li>
-</ul>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ul>
-<li>加上  &gt; </li>
-</ul>
-<h3 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h3><ol>
-<li><p>使用 | 分列.</p>
-</li>
-<li><p>换行分行.</p>
-</li>
-<li><p>默认标题栏居中对齐，内容居左对齐.</p>
-</li>
-<li><p>-:表示内容和标题栏居右对齐，:-表示内容和标题栏居左对齐，:-:表示内容和标题栏居中对齐.</p>
+<li><p>map端文件合并</p>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">左对齐标题</th>
-<th style="text-align:right">右对齐标题</th>
-<th style="text-align:center">居中对齐标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">短文本</td>
-<td style="text-align:right">中等文本</td>
-<td style="text-align:center">稍微长一点的文本</td>
-</tr>
-<tr>
-<td style="text-align:left">稍微长一点的文本</td>
-<td style="text-align:right">短文本</td>
-<td style="text-align:center">中等文本</td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-常见错误"><a href="#3-常见错误" class="headerlink" title="3. 常见错误"></a>3. 常见错误</h2><h2 id="4-编辑器"><a href="#4-编辑器" class="headerlink" title="4. 编辑器"></a>4. 编辑器</h2><h3 id="Sublime"><a href="#Sublime" class="headerlink" title="Sublime"></a>Sublime</h3><ul>
-<li><p>适合各种代码编辑</p>
+<p>在Reduce阶段</p>
+<p>1.group by :对map端发来的文件进行合并</p>
+<ol start="2">
+<li><p>select : 过滤列用于输出结果</p>
 </li>
-<li><p>实时显示能力不足</p>
+<li><p>limit排序</p>
 </li>
-</ul>
-<h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><ul>
-<li><p>轻便的Markdown编辑器</p>
-</li>
-<li><p>可以实时显示实际效果</p>
-</li>
-<li><p>自动补全</p>
-</li>
-</ul>
+</ol>
+<hr>
+<p>知道了hive的执行顺序后，我们来看几条可以提升hive速度的方式。</p>
+<p>原则一：分区一定要加。</p>
+<p>原则二：连接表时使用相同的关键词，这样只会产生一个job。</p>
+<p>原则三：减少每个阶段的数据量，只选出需要的，在join表前就进行过滤。在实习时，有时候为了减少代码量，包含了多余的字段，导致速度会变慢一些。</p>
+<p>原则四：map端聚合。在上data mining的时候，写map reduce程序，有时候会在mapper和reducer之间加一个combinator,提前进行合并以减少通信成本。</p>
+<blockquote>
+<p>hive.map.aggr=true; // 用于设定是否在 map 端进行聚合，默认值为真hive.groupby.mapaggr.checkinterval=100000; // 用于设定 map 端进行聚合操作的条目数</p>
+</blockquote>
+<p>原则五：大表放后面。在执行多个表时，会先将前面的表放到缓存，因此最好将大表放到最后。</p>
+<p>以上是我在实习时候使用的一些技巧，还有很多hive设置的技巧可以参考一下链接，等我亲自实践后再更新到上面。</p>
+<p>扩展：<a href="http://daizj.iteye.com/blog/2289981" target="_blank" rel="noopener">http://daizj.iteye.com/blog/2289981</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
@@ -413,7 +388,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#hexo','#ace','#markdown','#总结','#最佳实践',],
+            'data': ['#ace','#hive','#markdown','#速查','#hexo','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
