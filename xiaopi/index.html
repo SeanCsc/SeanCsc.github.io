@@ -128,9 +128,9 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="效率"> 效率 </li>
-    
     <li data-rel="大数据"> 大数据 </li>
+    
+    <li data-rel="效率"> 效率 </li>
     
 </ul>
 <div class="left-bottom">
@@ -174,19 +174,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">markdown</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">速查</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hive</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -195,6 +183,18 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">最佳实践</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">速查</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <div class="clearfix"></div>
@@ -346,7 +346,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#markdown','#速查','#hive','#hexo','#总结','#最佳实践',],
+            'data': ['#ace','#hive','#总结','#最佳实践','#markdown','#速查','#hexo',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
