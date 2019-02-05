@@ -128,9 +128,9 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="大数据"> 大数据 </li>
-    
     <li data-rel="效率"> 效率 </li>
+    
+    <li data-rel="大数据"> 大数据 </li>
     
 </ul>
 <div class="left-bottom">
@@ -174,15 +174,11 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hive</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">总结</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">最佳实践</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -194,7 +190,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
+        <a href="javascript:" class="color3">总结</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">最佳实践</a>
     </li>
     
     <div class="clearfix"></div>
@@ -379,7 +379,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#hive','#总结','#最佳实践','#markdown','#速查','#hexo',],
+            'data': ['#ace','#hexo','#hive','#markdown','#速查','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

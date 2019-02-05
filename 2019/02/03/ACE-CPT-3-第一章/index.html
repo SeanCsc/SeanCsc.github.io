@@ -128,9 +128,9 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="大数据"> 大数据 </li>
-    
     <li data-rel="效率"> 效率 </li>
+    
+    <li data-rel="大数据"> 大数据 </li>
     
 </ul>
 <div class="left-bottom">
@@ -174,15 +174,11 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hive</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">总结</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">最佳实践</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -194,7 +190,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
+        <a href="javascript:" class="color3">总结</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">最佳实践</a>
     </li>
     
     <div class="clearfix"></div>
@@ -279,7 +279,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 18:54:12">2019-02-03 12:41</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 18:56:51">2019-02-03 12:41</time>
         
     </div>
     <div class="article-meta">
@@ -326,7 +326,8 @@
 <p>初步的学习计划是在学习每个单元之前，现在ACE账号里看课程视频、做测试，每个单元的测试题会整理到文章的后面，做错的题会附上解释。阅读笔记会先整理在书本上，周末会把提纲整理到后面的文章中。</p>
 <hr>
 <p>第一章：职责范围、证书和补给</p>
-<p>首先，<strong>术业有专攻</strong>，虽然不同的职业会有重叠，但是专业的事应该让专业的人去做。ACE对自己的CPT设定了职责范围(scope of practice)，对自己的客户只应该提供范围内的解答。书上给了一个大的表格，总结来看，CPT能做的是给出从运动角度的相关建议和指导，其它涉及到诊病、饮食等应建议客户去咨询医生或者营养专家。例1，如果客户向你咨询饮食以达到减脂的目的，你可以做的是演示相关的运动动作或者建议客户去看标准的饮食指导，更加细节的部分（饮食计划、食谱等）应让客户去咨询dietition。其次，在设计运动计划时应当配合客户的营养团队，而不是contradict.</p>
+<p>首先，<strong>术业有专攻</strong>，虽然不同的职业会有重叠，但是专业的事应该让专业的人去做。ACE对自己的CPT设定了职责范围(scope of practice)，对自己的客户只应该提供范围内的解答。书上给了一个大的表格，总结来看，CPT能做的是给出从运动角度的相关建议和指导，其它涉及到诊病、饮食等应建议客户去咨询医生或者营养专家。例1，如果客户向你咨询饮食以达到减脂的目的，你可以做的是演示相关的运动动作或者建议客户去看标准的饮食指导，更加细节的部分（饮食计划、食谱等）应让客户去咨询dietition。其次，在设计运动计划时应当配合客户的营养团队，而不是contradict。下图是一些更加具体的例子。</p>
+<p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/sop.jpg" alt="example"></p>
 <p>第二点，关于证书。主要目的是protect the public from harm.为此,ACE设立了必须要遵循的ACE CODE OF THICS。这些原则的理解可以有效地避免潜在的公众伤害。另外，还介绍了关于补剂的概念，补剂只是一种补充，fitness goal也可以在没有补剂的情况下实现，并且补剂可能会存在副作用。如果客户希望关于补剂的推荐，应当推荐他们去咨询physician/dietitian。最后是关于职业发展上的建议。</p>
 <p>quiz:</p>
 <ul>
@@ -380,7 +381,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#hive','#总结','#最佳实践','#markdown','#速查','#hexo',],
+            'data': ['#ace','#hexo','#hive','#markdown','#速查','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
