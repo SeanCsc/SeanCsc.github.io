@@ -6,17 +6,17 @@
   <meta name="keywords" content=" python ">
   <meta name="description" content="优雅地写Python-如何调整python写法大幅度提升速度 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="欢迎交换友链，一起交流学习！">
+<meta name="description" content="惊不惊喜？感不感动？">
 <meta property="og:type" content="website">
-<meta property="og:title" content="BBS">
-<meta property="og:url" content="http://yoursite.com/bbs/index.html">
+<meta property="og:title" content="最爱小王">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="欢迎交换友链，一起交流学习！">
+<meta property="og:description" content="惊不惊喜？感不感动？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-31T18:37:44.040Z">
+<meta property="og:updated_time" content="2019-02-02T15:18:42.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BBS">
-<meta name="twitter:description" content="欢迎交换友链，一起交流学习！">
+<meta name="twitter:title" content="最爱小王">
+<meta name="twitter:description" content="惊不惊喜？感不感动？">
 
 
 <link rel="icon" href="/img/man.jpg">
@@ -128,11 +128,11 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="开发"> 开发 </li>
-    
     <li data-rel="效率"> 效率 </li>
     
     <li data-rel="大数据"> 大数据 </li>
+    
+    <li data-rel="开发"> 开发 </li>
     
 </ul>
 <div class="left-bottom">
@@ -176,15 +176,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">python</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -295,7 +295,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 19:17:04">2019-02-05 19:16</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 19:19:09">2019-02-05 19:16</time>
         
     </div>
     <div class="article-meta">
@@ -342,13 +342,13 @@
 <ol>
 <li>数据离散化。在滴滴实习的时候，需要按时间段给分成早午晚高峰，上来就把时间用了一个for循环遍历，几个if语句，然后赋值。我们来看下这个方法的速度。<strong>任务要求:新增一列，把LotArea按7000，12000切分为三部分</strong></li>
 </ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/14119097-699d81d5fd2e2af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>时间大约是0.7s，大约要写10行。<br>接下来我们看一下有没有更优雅，更快的方法。<strong>原则1:利用好python的原生方法</strong><br>这个需求是一个映射的过程，所以我们可以直接用dataframe的map函数映射过去。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-3d700bb33a4215e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>0.002s,一行代码。<br><strong>总结：如果涉及到列的转化用map,如果是对自己进行处理用apply,如果是筛选，用filter。</strong></p>
-<p>2.计算两两之间的距离。这是一个非常常见的需求，比如我们在算knn的时候肯定少不了算pair distance。直接的暴力方法是两个for()循环。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-a2b04041e29eb297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>可以看到时间是39.27s。<br>接下来我们来看python的原生方法：<br><img src="https://upload-images.jianshu.io/upload_images/14119097-18fb468b1e6eb5f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14119097-699d81d5fd2e2af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间1"></p>
+<p>时间大约是0.7s，大约要写10行。<br>接下来我们看一下有没有更优雅，更快的方法。<strong>原则1:利用好python的原生方法</strong><br>这个需求是一个映射的过程，所以我们可以直接用dataframe的map函数映射过去。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-3d700bb33a4215e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间2"><br>0.002s,一行代码。<br><strong>总结：如果涉及到列的转化用map,如果是对自己进行处理用apply,如果是筛选，用filter。</strong></p>
+<p>2.计算两两之间的距离。这是一个非常常见的需求，比如我们在算knn的时候肯定少不了算pair distance。直接的暴力方法是两个for()循环。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-a2b04041e29eb297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>可以看到时间是39.27s。<br>接下来我们来看python的原生方法：<br><img src="https://upload-images.jianshu.io/upload_images/14119097-18fb468b1e6eb5f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原生方法"></p>
 <p>速度是天壤之别。</p>
 <p>3.容器的差别：需求将items装入一个容器，然后看查找速度。这里我们主要比较set和list.<br>list和set查找数据的速度分别是O(n)和O(1)</p>
 <p>4.关于字典：整体操作要慢于依次遍历（比如counter统计所以行里的单词个数，用每次统计的相加要远慢于逐个单词逐个单词的更新）</p>
-<p>后续拓展：<a href="https://segmentfault.com/a/1190000000666603" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000666603</a></p>
+<p>后续拓展：<a href="https://segmentfault.com/a/1190000000666603" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000666603</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
@@ -390,7 +390,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#python','#hexo','#hive','#markdown','#速查','#总结','#最佳实践',],
+            'data': ['#ace','#hexo','#hive','#python','#markdown','#速查','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
