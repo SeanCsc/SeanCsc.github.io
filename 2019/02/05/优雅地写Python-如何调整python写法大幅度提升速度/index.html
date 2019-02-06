@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>ACE-CPT(2)-CPR/AED | Hexo</title>
-  <meta name="keywords" content=" ace ">
-  <meta name="description" content="ACE-CPT(2)-CPR/AED | Hexo">
+  <title>优雅地写Python-如何调整python写法大幅度提升速度 | Hexo</title>
+  <meta name="keywords" content=" python ">
+  <meta name="description" content="优雅地写Python-如何调整python写法大幅度提升速度 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="欢迎交换友链，一起交流学习！">
 <meta property="og:type" content="website">
@@ -271,9 +271,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ACE-CPT-2-CPR-AED" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-优雅地写Python-如何调整python写法大幅度提升速度" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">ACE-CPT(2)-CPR/AED</h1>
+        <h1 class="article-title">优雅地写Python-如何调整python写法大幅度提升速度</h1>
     
     <div class="article-meta">
         
@@ -281,21 +281,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="运动表现">运动表现</a>
+            <a href="javascript:" data-rel="开发">开发</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">ace</a>
+            <a href="javascript:" class="color2">python</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-02 20:21:32">2019-02-02 10:24</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 19:17:04">2019-02-05 19:16</time>
         
     </div>
     <div class="article-meta">
@@ -332,13 +332,23 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>考ACE的第一步是需要具有CPR/AED，用于表明证书持有者已接受过心脏复苏(CPR)和自动体外除颤(AED)操作培训并通过相关考核。</p>
-<p>因为在美国上学，学校健身房每隔几周会有红十字会的工作人员来培训，所以就找了个周末参加了培训。首先是需要在红十字会网站上进行大约3小时的视频和情景学习，通过考核，然后进行半天的实操训练。</p>
-<p>实操训练主要就是结合网上的视频进行演练，使用模型熟悉一些姿势和流程，也会进行一些情景模拟。</p>
-<p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/cpr.jpg" alt="CPR模拟"></p>
-<p>AED部分主要讲解如何使用自动体外除颤器，可以诊断特定的心律失常并给予电击除颤。CPR通常需要和AED结合进行救助。</p>
-<p>在进行完培训后几天会收到红十字会发来的证书电子版，如果想要纸质版需要额外支付邮费。证书的有效期是2年，2年后需要去更新和重新上课，有效的CPR才能保持ACE的CPT资格。</p>
-<p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/redcross.jpg" alt="certificate"></p>
+        <blockquote>
+<p>有挣扎才会有成长</p>
+</blockquote>
+<p>这学期选了一门data mining, 第一次project挣扎map reduce, 第二次project挣扎python的速度，并且就是因为速度跑不动付出了一个late day的代价。之前的数据集都太小，就算是暴力写法只要实现了功能时间差别都在可接受范围内。</p>
+<p>关于速度的第一次碰壁是在暑假实习的时候，hiveSQL和python的写法没有达到最优，花费了很长时间，这也确实是我的一大短板。这篇文章会结合我挣扎的事例，数据和网络上的其他资源，尽量生动一些，希望读者能在遇到相似的问题场景时候可以想起这篇文章，避免踩进这些坑里。如果读者有更高效的方法，非常欢迎指出。如果时间紧张，可以直接看每一个案例下的总结。</p>
+<p>这篇文章会用kaggle入门比赛的house prediction的部分数据进行情景演示和分析。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-75fa65c99f7a8e1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据集"></p>
+<p>大小是1460 ＊ 5 </p>
+<ol>
+<li>数据离散化。在滴滴实习的时候，需要按时间段给分成早午晚高峰，上来就把时间用了一个for循环遍历，几个if语句，然后赋值。我们来看下这个方法的速度。<strong>任务要求:新增一列，把LotArea按7000，12000切分为三部分</strong></li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/14119097-699d81d5fd2e2af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>时间大约是0.7s，大约要写10行。<br>接下来我们看一下有没有更优雅，更快的方法。<strong>原则1:利用好python的原生方法</strong><br>这个需求是一个映射的过程，所以我们可以直接用dataframe的map函数映射过去。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-3d700bb33a4215e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>0.002s,一行代码。<br><strong>总结：如果涉及到列的转化用map,如果是对自己进行处理用apply,如果是筛选，用filter。</strong></p>
+<p>2.计算两两之间的距离。这是一个非常常见的需求，比如我们在算knn的时候肯定少不了算pair distance。直接的暴力方法是两个for()循环。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-a2b04041e29eb297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>可以看到时间是39.27s。<br>接下来我们来看python的原生方法：<br><img src="https://upload-images.jianshu.io/upload_images/14119097-18fb468b1e6eb5f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>速度是天壤之别。</p>
+<p>3.容器的差别：需求将items装入一个容器，然后看查找速度。这里我们主要比较set和list.<br>list和set查找数据的速度分别是O(n)和O(1)</p>
+<p>4.关于字典：整体操作要慢于依次遍历（比如counter统计所以行里的单词个数，用每次统计的相加要远慢于逐个单词逐个单词的更新）</p>
+<p>后续拓展：<a href="https://segmentfault.com/a/1190000000666603" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000666603</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>

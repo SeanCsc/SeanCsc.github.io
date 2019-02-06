@@ -128,6 +128,8 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
+    <li data-rel="开发"> 开发 </li>
+    
     <li data-rel="效率"> 效率 </li>
     
     <li data-rel="大数据"> 大数据 </li>
@@ -143,7 +145,7 @@
 
 
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="8">
+<input type="hidden" id="yelog_site_posts_number" value="10">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -171,6 +173,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">ace</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -206,6 +212,16 @@
         <a id="top" class="" href="/2019/01/30/hello-world/" data-tag="" data-author="">
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-01-30 21:36:58">2019/01/30</span>
+        </a>
+        
+        <a class="开发 " href="/2019/02/05/优雅地写Python-如何调整python写法大幅度提升速度/" data-tag="python" data-author="">
+            <span class="post-title" title="优雅地写Python-如何调整python写法大幅度提升速度">优雅地写Python-如何调整python写法大幅度提升速度</span>
+            <span class="post-date" title="2019-02-05 19:16:30">2019/02/05</span>
+        </a>
+        
+        <a class="" href="/2019/02/05/ACE-CPT-4-第二章/" data-tag="" data-author="">
+            <span class="post-title" title="ACE-CPT(4)-第二章">ACE-CPT(4)-第二章</span>
+            <span class="post-date" title="2019-02-05 18:58:14">2019/02/05</span>
         </a>
         
         <a class="运动表现 " href="/2019/02/03/ACE-CPT-3-第一章/" data-tag="ace" data-author="">
@@ -279,7 +295,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 18:56:51">2019-02-03 12:41</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 18:59:11">2019-02-03 12:41</time>
         
     </div>
     <div class="article-meta">
@@ -328,9 +344,9 @@
 <p>第一章：职责范围、证书和补给</p>
 <p>首先，<strong>术业有专攻</strong>，虽然不同的职业会有重叠，但是专业的事应该让专业的人去做。ACE对自己的CPT设定了职责范围(scope of practice)，对自己的客户只应该提供范围内的解答。书上给了一个大的表格，总结来看，CPT能做的是给出从运动角度的相关建议和指导，其它涉及到诊病、饮食等应建议客户去咨询医生或者营养专家。例1，如果客户向你咨询饮食以达到减脂的目的，你可以做的是演示相关的运动动作或者建议客户去看标准的饮食指导，更加细节的部分（饮食计划、食谱等）应让客户去咨询dietition。其次，在设计运动计划时应当配合客户的营养团队，而不是contradict。下图是一些更加具体的例子。</p>
 <p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/sop.jpg" alt="example"></p>
-<p>第二点，关于证书。主要目的是protect the public from harm.为此,ACE设立了必须要遵循的ACE CODE OF THICS。这些原则的理解可以有效地避免潜在的公众伤害。另外，还介绍了关于补剂的概念，补剂只是一种补充，fitness goal也可以在没有补剂的情况下实现，并且补剂可能会存在副作用。如果客户希望关于补剂的推荐，应当推荐他们去咨询physician/dietitian。最后是关于职业发展上的建议。</p>
+<p>第二点，关于证书。主要目的是<strong>protect the public from harm</strong>.为此,ACE设立了必须要遵循的ACE CODE OF THICS。这些原则的理解可以有效地避免潜在的公众伤害。另外，还介绍了关于补剂的概念，补剂只是一种补充，fitness goal也可以在没有补剂的情况下实现，并且补剂可能会存在副作用。如果客户希望关于补剂的推荐，应当推荐他们去咨询physician/dietitian。最后是关于职业发展上的建议。</p>
 <p>quiz:</p>
-<ul>
+<ol>
 <li><p>每周最少<strong>150min</strong>的运动时间可以使身体获益</p>
 </li>
 <li><p>私教在一个healthcare团队中的独特性：展示如何有效地锻炼。</p>
@@ -339,7 +355,7 @@
 </li>
 <li><p>维持证书的条件：两年内的20h知识补充和有效的CPR/AED卡</p>
 </li>
-</ul>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
@@ -381,7 +397,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#hexo','#hive','#markdown','#速查','#总结','#最佳实践',],
+            'data': ['#ace','#python','#hexo','#hive','#markdown','#速查','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
