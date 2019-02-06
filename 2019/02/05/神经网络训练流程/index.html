@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>BBS | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="BBS | Hexo">
+  <title>神经网络训练流程 | Hexo</title>
+  <meta name="keywords" content=" 最佳实践 , 神经网络 ">
+  <meta name="description" content="神经网络训练流程 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="欢迎交换友链，一起交流学习！">
 <meta property="og:type" content="website">
@@ -282,19 +282,33 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="bbs-" class="article article-type-bbs" itemscope="" itemprop="blogPost">
+        <article id="post-神经网络训练流程" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">BBS</h1>
+        <h1 class="article-title">神经网络训练流程</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+            <a href="javascript:" data-rel="算法">算法</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">最佳实践</a>
+            
+            <a href="javascript:" class="color5">神经网络</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-01-31 13:37:44">2017-09-19 12:48</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 19:43:29">2019-02-05 19:40</time>
         
     </div>
     <div class="article-meta">
@@ -331,7 +345,21 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>最佳实践是能形成一个能不断优化的闭环反馈。神经网络的训练也需要遵循这一原则，希望能看到模型的效果，并且方便对模型进行调整并进一步观察效果。本篇文章不涉及数据的预处理，只讨论我认为的一个比较好的训练流程。</p>
+<p>流程：</p>
+<ol>
+<li><p>分割数据集</p>
+</li>
+<li><p>make batch:因为可能涉及到多个神经网络组合，所以需要把不同的神经网络的数据集准备到一起<br>可能会多一步iterate batch-生成batch</p>
+</li>
+<li><p>build model：这一步是完成模型的搭建和编译</p>
+</li>
+<li><p>model training:进行模型的训练</p>
+</li>
+<li><p>print metrics:主要用来看模型的表现，并进行相关部分的更新，形成闭环。</p>
+</li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
     </div>
