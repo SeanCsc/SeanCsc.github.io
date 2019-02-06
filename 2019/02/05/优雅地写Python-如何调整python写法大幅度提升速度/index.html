@@ -6,14 +6,17 @@
   <meta name="keywords" content=" python ">
   <meta name="description" content="优雅地写Python-如何调整python写法大幅度提升速度 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="惊不惊喜？感不感动？">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="最爱小王">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="惊不惊喜？感不感动？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-31T21:42:43.395Z">
+<meta property="og:updated_time" content="2019-02-02T15:18:42.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="最爱小王">
+<meta name="twitter:description" content="惊不惊喜？感不感动？">
 
 
 <link rel="icon" href="/img/man.jpg">
@@ -125,9 +128,9 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="大数据"> 大数据 </li>
-    
     <li data-rel="效率"> 效率 </li>
+    
+    <li data-rel="大数据"> 大数据 </li>
     
     <li data-rel="开发"> 开发 </li>
     
@@ -173,6 +176,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hive</a>
     </li>
     
@@ -182,10 +189,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">速查</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -292,7 +295,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 19:19:24">2019-02-05 19:16</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 19:43:03">2019-02-05 19:16</time>
         
     </div>
     <div class="article-meta">
@@ -332,8 +335,8 @@
         <blockquote>
 <p>有挣扎才会有成长</p>
 </blockquote>
-<p>这学期选了一门data mining, 第一次project挣扎map reduce, 第二次project挣扎python的速度，并且就是因为速度跑不动付出了一个late day的代价。之前的数据集都太小，就算是暴力写法只要实现了功能时间差别都在可接受范围内。</p>
-<p>关于速度的第一次碰壁是在暑假实习的时候，hiveSQL和python的写法没有达到最优，花费了很长时间，这也确实是我的一大短板。这篇文章会结合我挣扎的事例，数据和网络上的其他资源，尽量生动一些，希望读者能在遇到相似的问题场景时候可以想起这篇文章，避免踩进这些坑里。如果读者有更高效的方法，非常欢迎指出。如果时间紧张，可以直接看每一个案例下的总结。</p>
+<p>上学期选了一门data mining, 第一次project挣扎map reduce, 第二次project挣扎python的速度，并且就是因为速度跑不动付出了一个late day的代价。之前的数据集都太小，就算是暴力写法只要实现了功能时间差别都在可接受范围内。</p>
+<p>关于速度的第一次碰壁是在暑假实习的时候，hiveSQL和python的写法没有达到最优，花费了很长时间，这也确实是我的一大短板。这篇文章会结合我挣扎的事例，数据和网络上的其他资源，尽量生动一些，希望大家能在遇到相似的问题场景时候可以想起这篇文章，避免踩进这些坑里。如果大家有更高效的方法，非常欢迎指出。如果时间紧张，可以直接看每一个案例下的总结。</p>
 <p>这篇文章会用kaggle入门比赛的house prediction的部分数据进行情景演示和分析。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-75fa65c99f7a8e1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据集"></p>
 <p>大小是1460 ＊ 5 </p>
 <ol>
@@ -387,7 +390,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#hive','#markdown','#速查','#hexo','#python','#总结','#最佳实践',],
+            'data': ['#ace','#hexo','#hive','#markdown','#速查','#python','#总结','#最佳实践',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
