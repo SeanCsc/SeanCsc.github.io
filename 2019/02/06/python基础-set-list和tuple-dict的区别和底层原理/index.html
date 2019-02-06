@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>最佳实践 | Hexo</title>
-  <meta name="keywords" content=" 总结 , 最佳实践 ">
-  <meta name="description" content="最佳实践 | Hexo">
+  <title>python基础-set,list和tuple,dict的区别和底层原理 | Hexo</title>
+  <meta name="keywords" content=" python , 数据结构 ">
+  <meta name="description" content="python基础-set,list和tuple,dict的区别和底层原理 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="惊不惊喜？感不感动？">
 <meta property="og:type" content="website">
@@ -311,9 +311,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-最佳实践" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-python基础-set-list和tuple-dict的区别和底层原理" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">最佳实践</h1>
+        <h1 class="article-title">python基础-set,list和tuple,dict的区别和底层原理</h1>
     
     <div class="article-meta">
         
@@ -321,23 +321,23 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="效率">效率</a>
+            <a href="javascript:" data-rel="开发">开发</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">总结</a>
+            <a href="javascript:" class="color2">python</a>
             
-            <a href="javascript:" class="color5">最佳实践</a>
+            <a href="javascript:" class="color5">数据结构</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-02 11:57:43">2019-02-02 11:50</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-06 13:47:26">2019-02-06 13:45</time>
         
     </div>
     <div class="article-meta">
@@ -359,7 +359,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#set-集合，无序，自动去重"><span class="toc-text">set -集合，无序，自动去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"><span class="toc-text">所以dict比set多了一步hash的过程，相比较来看，set的速度最快。</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -374,23 +374,12 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在实习的时候，第一次接触到工程上的最佳实践概念，后来在实习和做项目的过程中，发现其实这是一个非常重要的思想。</p>
-<p><strong> 所以这篇文章结合自己的体会聊一下什么是最佳实践以及如何发现最佳实践</strong></p>
-<p>根据维基百科的解释，最佳实践是存在某种<strong>技术、方法、过程、活动或机制</strong>可以使生产或管理实践的结果达到最优，并减少出错的可能性。就我个人理解而言，最佳实践就是通过某套流程或机制可以提高效率并且减少出错／减少纠错所需要的时间。最优其实是相对于改进前而言，只要某个流程／方法能够达到这个目的，那么这就是到目前为止的最优实践。</p>
-<p>不止在工程开发上有最优实践，其实我们日常生活也应该时刻想着这一概念，并且不断地用更新后的流程去替换掉次优实践（自己造的词）。先来看几个不那么优的例子。</p>
-<p>1.对电脑文件没有一个合理的空间分布／对文件的备份混乱。这是我在实习时候遇到的问题，在有新需求的时候就在目前的文件夹下面找一个空间，有相近的需求就拿来写好的文件直接改，到实习结束的时候发现文件夹里面非常混乱。这个问题也反映在我自己的电脑里。其实，这是一个很普遍的问题，<strong>缺乏对整体的认知和对重构的懒惰</strong>。换一种方法，如果在每次接到一个需求的时候，能站得再高一些，看到是在哪个大类别下面，并且及时重构，或许就能省出很多时间去找文件，也能清晰地看到进展。同理，对github也是，src/data/配置文件等等要有比较清晰地分隔。</p>
-<p>2.在上data mining的课的时候，需要调代码，最开始是直接写好了就用整个数据跑，等了半天发现结果不对，然后再调，这就是一种次优实践。一个更好的机制是先提取一部分小数据，调试代码，验证小数据集，跑大数据集。</p>
-<p>这样的例子太多了，<strong>技术、方法、过程、活动或机制</strong>都可以成为改进的方向，比如做饭的时候，做红烧的菜的时候，可以先炖上肉，然后准备辅料这种流程就比先准备好所有材料要效率高。那么有哪些发现最佳实践的方法那？</p>
-<ol>
-<li><p>首先一定要自己思考这个方法是否可以替换掉已有的最优实践，如果可以以后就按照这个实践方案执行，最开始可能会不适应，因为需要执行一个不熟悉的机制，但是到后期一定会体会到最优实践带来的效果的</p>
-</li>
-<li><p>最有效的方法是向有经验的前辈学习，当你发现有人效率比你高，试着去问对方是如何做的，然后和自己的方案进行比较，是否更加有效。</p>
-</li>
-<li><p>模仿网络上的资源。比如很多github的管理非常棒，我们就可以用这种思路管理我们自己的仓库。</p>
-</li>
-</ol>
+        <p>list-链表，有序的数组，［］<br>tuple-元组，适用于不同类型的元素<br>dict - 字典， ｛｝通过键值进行查找</p>
+<h2 id="set-集合，无序，自动去重"><a href="#set-集合，无序，自动去重" class="headerlink" title="set -集合，无序，自动去重"></a>set -集合，无序，自动去重</h2><p>底层的查找效率比较<br>list- O(n)<br>set - 做了去重－红黑树(O(nlogn))<br>dict- 对key做了hash,再对hash进行红黑树 o(nlogn)</p>
+<h2 id="所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"><a href="#所以dict比set多了一步hash的过程，相比较来看，set的速度最快。" class="headerlink" title="所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"></a>所以dict比set多了一步hash的过程，相比较来看，set的速度最快。</h2><p>上面提到了红黑树，那么我们就介绍一下红黑树<br>红黑树是在bst基础上衍生出来的，主要是解决bst插入过多点后的不平衡问题。<br>红黑树有几个特性：<br>1.根是黑的，叶子是黑的<br>2.红色节点的子节点是黑的<br>3.从任一节点到叶子节点的路径上黑色节点的个数是一样的。<br>然后当数据来插入的时候，通过自平衡调整，使得最长路径不会超过最短路径的两倍。</p>
 <hr>
-<p>最佳实践无处不在，有时候可能我们觉得已经是最佳实践了，但是一定还会有更有效的方法来提高效率。形成一个优秀的正向反馈才能让我们效率越来越高。后文会不定期更新一些我遇到的最佳实践的例子（可以根据tag:最佳实践查找)，当然这只是对我而言，不同的人对最佳实践有不同的认识，所以仅供参考。</p>
+<p>常见需求<br>Dict:<br>1.如何根据值过滤掉元素<br>[k for k,v in dict.items() if v&gt;10]<br>第一部分是要存下来的值，items遍历查找<br>2.字典/counter的方法<br><img src="https://upload-images.jianshu.io/upload_images/14119097-ee3e6547e522d26c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="方法"></p>
+<p>List：<br>1.一个list呈现字典的形态，提取key和values?<br>使用zip() - unzip 可以提取<br>同样，如果想合并，可以用zip</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
