@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>优雅地写Python-如何调整python写法大幅度提升速度 | Hexo</title>
-  <meta name="keywords" content=" python ">
-  <meta name="description" content="优雅地写Python-如何调整python写法大幅度提升速度 | Hexo">
+  <title>lolita小课堂 | Hexo</title>
+  <meta name="keywords" content=" lolita , love ">
+  <meta name="description" content="lolita小课堂 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="欢迎交换友链，一起交流学习！">
 <meta property="og:type" content="website">
@@ -297,9 +297,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-优雅地写Python-如何调整python写法大幅度提升速度" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-lolita小课堂" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">优雅地写Python-如何调整python写法大幅度提升速度</h1>
+        <h1 class="article-title">lolita小课堂</h1>
     
     <div class="article-meta">
         
@@ -307,21 +307,23 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="开发">开发</a>
+            <a href="javascript:" data-rel="生活">生活</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">python</a>
+            <a href="javascript:" class="color2">lolita</a>
+            
+            <a href="javascript:" class="color5">love</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 21:35:51">2019-02-05 19:16</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-05 22:37:27">2019-02-05 21:36</time>
         
     </div>
     <div class="article-meta">
@@ -343,7 +345,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是lolita"><span class="toc-text">什么是lolita</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lolita小裙子的到手流程"><span class="toc-text">lolita小裙子的到手流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#购买渠道和常见牌子"><span class="toc-text">购买渠道和常见牌子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#术语"><span class="toc-text">术语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见词"><span class="toc-text">常见词</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -358,23 +360,49 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>有挣扎才会有成长</p>
-</blockquote>
-<p>上学期选了一门data mining, 第一次project挣扎map reduce, 第二次project挣扎python的速度，并且就是因为速度跑不动付出了一个late day的代价。之前的数据集都太小，就算是暴力写法只要实现了功能时间差别都在可接受范围内。</p>
-<p>关于速度的第一次碰壁是在暑假实习的时候，hiveSQL和python的写法没有达到最优，花费了很长时间，这也确实是我的一大短板。这篇文章会结合我挣扎的事例，数据和网络上的其他资源，尽量生动一些，希望大家能在遇到相似的问题场景时候可以想起这篇文章，避免踩进这些坑里。如果大家有更高效的方法，非常欢迎指出。如果时间紧张，可以直接看每一个案例下的总结。</p>
-<p>本文以kaggle入门比赛的house prediction的部分数据进行情景演示和分析。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-75fa65c99f7a8e1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据集"></p>
-<p>大小是1460 ＊ 5 </p>
-<ol>
-<li>数据离散化。在滴滴实习的时候，需要按时间段给分成早午晚高峰，上来就把时间用了一个for循环遍历，几个if语句，然后赋值。我们来看下这个方法的速度。<strong>任务要求:新增一列，把LotArea按7000，12000切分为三部分</strong></li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/14119097-699d81d5fd2e2af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间1"></p>
-<p>时间大约是0.7s，大约要写10行。<br>接下来我们看一下有没有更优雅，更快的方法。<strong>原则1:利用好python的原生方法</strong><br>这个需求是一个映射的过程，所以我们可以直接用dataframe的map函数映射过去。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-3d700bb33a4215e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间2"><br>0.002s,一行代码。<br><strong>总结：如果涉及到列的转化用map,如果是对自己进行处理用apply,如果是筛选，用filter。</strong></p>
-<p>2.计算两两之间的距离。这是一个非常常见的需求，比如我们在算knn的时候肯定少不了算pair distance。直接的暴力方法是两个for()循环。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-a2b04041e29eb297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>可以看到时间是39.27s。<br>接下来我们来看python的原生方法：<br><img src="https://upload-images.jianshu.io/upload_images/14119097-18fb468b1e6eb5f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原生方法"></p>
-<p>速度是天壤之别。</p>
-<p>3.容器的差别：需求将items装入一个容器，然后看查找速度。这里我们主要比较set和list.<br>list和set查找数据的速度分别是O(n)和O(1)</p>
-<p>4.关于字典：整体操作要慢于依次遍历（比如counter统计所以行里的单词个数，用每次统计的相加要远慢于逐个单词逐个单词的更新）</p>
-<p>后续拓展：<a href="https://segmentfault.com/a/1190000000666603" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000666603</a></p>
+        <p>在小王老师的科普下，对lolita着装风格终于有了入门级别的了解，用这篇文章记录一下进阶的过程，也希望大家可以更多地去了解这个比较小众但是有很多亮眼设计的服装风格。</p>
+<h2 id="什么是lolita"><a href="#什么是lolita" class="headerlink" title="什么是lolita"></a>什么是lolita</h2><p>lolita是一种服装风格，其它比较常见的服装风格有运动风、商务等。所以第一个要分清楚的点是lolita和cosplay、萝莉并不是一回事。lolita风格主要有甜系，古典，哥特等，类型主要有jsk(jumper skirt), sk, op(one-piece 连衣裙)只要场合合适，每个人都应该有选择自己喜欢着装的权利。</p>
+<h2 id="lolita小裙子的到手流程"><a href="#lolita小裙子的到手流程" class="headerlink" title="lolita小裙子的到手流程"></a>lolita小裙子的到手流程</h2><p>个人认为，小裙子的一个很大的特色在于柄图（裙摆的图案）的风格多变。最开始画手灵感突发画出了小裙子，对这个设计感兴趣的店家会买走画稿，然后去根据柄图做样衣，还原小裙子，然后店家会给顾客们看，根据顾客们的建议进行修改，通常在卖之前会给裙子起一个好听的名字。</p>
+<p>因为每条裙子需求量不是很大，所以小裙子的购买上一般需要先付定金预约，定金是不给退的，然后店家根据购买的人数去制做，在做好裙子后补齐尾款，等待发货。所以一条裙子从付定金到收到小裙子一般需要等待几个月。如果错过了第一批预约，后面店家可能会根据前面的销量决定是否再贩（发起第二次预约）。</p>
+<h2 id="购买渠道和常见牌子"><a href="#购买渠道和常见牌子" class="headerlink" title="购买渠道和常见牌子"></a>购买渠道和常见牌子</h2><p>lolita裙子一般分成国牌和日牌。国牌的渠道一般通过微博上的店家购买，也会有一些微博号会进行汇总。日牌主要有baby, ap, meta, <a href="juliette-et-justine.com/">jej</a>, <a href="janemarple.shop-pro.jp">jane marple</a>，可以通过官网购买。</p>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><ul>
+<li><p>绀色 - 蓝色系中的一种颜色，带有紫色的深蓝色</p>
+</li>
+<li><p>若草色 - 薄荷色</p>
+</li>
+<li><p>生成色 - 米色</p>
+</li>
+<li><p>sax色 - 浅蓝色</p>
+</li>
+</ul>
+<h3 id="常见词"><a href="#常见词" class="headerlink" title="常见词"></a>常见词</h3><ul>
+<li><p>小萌款</p>
+</li>
+<li><p>天空树</p>
+</li>
+<li><p>秃头</p>
+</li>
+<li><p>撑（ eg.暴力撑、鱼骨撑）</p>
+</li>
+<li><p>双子</p>
+</li>
+<li><p>呲</p>
+</li>
+<li><p>地球人</p>
+</li>
+<li><p>再贩、二团、三团</p>
+</li>
+<li><p>受注</p>
+</li>
+<li><p>KC</p>
+</li>
+<li><p>发带</p>
+</li>
+<li><p>边夹</p>
+</li>
+<li><p>切替    </p>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
