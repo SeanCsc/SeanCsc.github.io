@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>优雅地写Python-如何调整python写法大幅度提升速度 | Hexo</title>
-  <meta name="keywords" content=" python ">
-  <meta name="description" content="优雅地写Python-如何调整python写法大幅度提升速度 | Hexo">
+  <title>python基础-位运算 | Hexo</title>
+  <meta name="keywords" content=" python , 数据结构 ">
+  <meta name="description" content="python基础-位运算 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="欢迎交换友链，一起交流学习！">
 <meta property="og:type" content="website">
@@ -325,9 +325,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-优雅地写Python-如何调整python写法大幅度提升速度" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-python基础-位运算" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">优雅地写Python-如何调整python写法大幅度提升速度</h1>
+        <h1 class="article-title">python基础-位运算</h1>
     
     <div class="article-meta">
         
@@ -344,12 +344,14 @@
             
             <a href="javascript:" class="color2">python</a>
             
+            <a href="javascript:" class="color5">数据结构</a>
+            
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 21:35:51">2019-02-05 19:16</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-08 18:26:25">2019-02-08 11:24</time>
         
     </div>
     <div class="article-meta">
@@ -386,23 +388,36 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>有挣扎才会有成长</p>
-</blockquote>
-<p>上学期选了一门data mining, 第一次project挣扎map reduce, 第二次project挣扎python的速度，并且就是因为速度跑不动付出了一个late day的代价。之前的数据集都太小，就算是暴力写法只要实现了功能时间差别都在可接受范围内。</p>
-<p>关于速度的第一次碰壁是在暑假实习的时候，hiveSQL和python的写法没有达到最优，花费了很长时间，这也确实是我的一大短板。这篇文章会结合我挣扎的事例，数据和网络上的其他资源，尽量生动一些，希望大家能在遇到相似的问题场景时候可以想起这篇文章，避免踩进这些坑里。如果大家有更高效的方法，非常欢迎指出。如果时间紧张，可以直接看每一个案例下的总结。</p>
-<p>本文以kaggle入门比赛的house prediction的部分数据进行情景演示和分析。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-75fa65c99f7a8e1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据集"></p>
-<p>大小是1460 ＊ 5 </p>
+        <p>位运算是就是把数字转换成机器语言来进行运算。</p>
+<ul>
+<li><p>左移： &lt;&lt;</p>
+</li>
+<li><p>右移： &gt;&gt;</p>
+</li>
+<li><p>按位与： &amp;</p>
+</li>
+<li><p>按位或： |</p>
+</li>
+<li><p>按位翻转： ~</p>
+</li>
+<li><p>按位异或：^</p>
+</li>
+</ul>
 <ol>
-<li>数据离散化。在滴滴实习的时候，需要按时间段给分成早午晚高峰，上来就把时间用了一个for循环遍历，几个if语句，然后赋值。我们来看下这个方法的速度。<strong>任务要求:新增一列，把LotArea按7000，12000切分为三部分</strong></li>
+<li><p>顺序无关</p>
+</li>
+<li><p>对一个数异或两次等于没有异或。</p>
+</li>
 </ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/14119097-699d81d5fd2e2af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间1"></p>
-<p>时间大约是0.7s，大约要写10行。<br>接下来我们看一下有没有更优雅，更快的方法。<strong>原则1:利用好python的原生方法</strong><br>这个需求是一个映射的过程，所以我们可以直接用dataframe的map函数映射过去。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-3d700bb33a4215e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="时间2"><br>0.002s,一行代码。<br><strong>总结：如果涉及到列的转化用map,如果是对自己进行处理用apply,如果是筛选，用filter。</strong></p>
-<p>2.计算两两之间的距离。这是一个非常常见的需求，比如我们在算knn的时候肯定少不了算pair distance。直接的暴力方法是两个for()循环。<br><img src="https://upload-images.jianshu.io/upload_images/14119097-a2b04041e29eb297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>可以看到时间是39.27s。<br>接下来我们来看python的原生方法：<br><img src="https://upload-images.jianshu.io/upload_images/14119097-18fb468b1e6eb5f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原生方法"></p>
-<p>速度是天壤之别。</p>
-<p>3.容器的差别：需求将items装入一个容器，然后看查找速度。这里我们主要比较set和list.<br>list和set查找数据的速度分别是O(n)和O(1)</p>
-<p>4.关于字典：整体操作要慢于依次遍历（比如counter统计所以行里的单词个数，用每次统计的相加要远慢于逐个单词逐个单词的更新）</p>
-<p>后续拓展：<a href="https://segmentfault.com/a/1190000000666603" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000666603</a></p>
+<hr>
+<p>利用异或的性质可以解决很多问题：涉及到缺失或者重复数字的时候可以把异或看作一个过滤器。</p>
+<p>场景一：</p>
+<p>2n+1个数字，找到单独的那个</p>
+<p>所有数字异或后留下的数字就是单独的那个。</p>
+<p>followup-1: 2n + 1 + 1个数字，找到单独的两个</p>
+<p>在所有数字异或后，找出任意一个为1的那一位，这一位说明这两个单独的数字上是不同的。用这一位可以把所有的数分成两组。（一个很有意思的思想-根据差异分组，逐个击破）</p>
+<p>followup-2:<br>给你1-1000个连续自然数，然后从中随机去掉两个，再打乱顺序，要求只遍历一次，求出被去掉的两个数</p>
+<p>followup-more: <a href="https://www.cnblogs.com/youxin/p/3349834.html" target="_blank" rel="noopener">https://www.cnblogs.com/youxin/p/3349834.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
