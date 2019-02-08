@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>python基础-set,list和tuple,dict的区别和底层原理 | Hexo</title>
-  <meta name="keywords" content=" python , 数据结构 ">
-  <meta name="description" content="python基础-set,list和tuple,dict的区别和底层原理 | Hexo">
+  <title>git速查 | Hexo</title>
+  <meta name="keywords" content=" git , 速查 ">
+  <meta name="description" content="git速查 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -317,9 +317,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-python基础-set-list和tuple-dict的区别和底层原理" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-git速查" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">python基础-set,list和tuple,dict的区别和底层原理</h1>
+        <h1 class="article-title">git速查</h1>
     
     <div class="article-meta">
         
@@ -327,23 +327,23 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="开发">开发</a>
+            <a href="javascript:" data-rel="效率">效率</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">python</a>
+            <a href="javascript:" class="color4">git</a>
             
-            <a href="javascript:" class="color5">数据结构</a>
+            <a href="javascript:" class="color3">速查</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-06 13:47:26">2019-02-06 13:45</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-07 11:47:08">2019-02-06 18:11</time>
         
     </div>
     <div class="article-meta">
@@ -365,7 +365,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#set-集合，无序，自动去重"><span class="toc-text">set -集合，无序，自动去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"><span class="toc-text">所以dict比set多了一步hash的过程，相比较来看，set的速度最快。</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常规"><span class="toc-text">常规</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#情景1-把不想要的代码-commit到本地仓库了，但是没有push"><span class="toc-text">情景1: 把不想要的代码 commit到本地仓库了，但是没有push</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -380,12 +380,15 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>list-链表，有序的数组，［］<br>tuple-元组，适用于不同类型的元素<br>dict - 字典， ｛｝通过键值进行查找</p>
-<h2 id="set-集合，无序，自动去重"><a href="#set-集合，无序，自动去重" class="headerlink" title="set -集合，无序，自动去重"></a>set -集合，无序，自动去重</h2><p>底层的查找效率比较<br>list- O(n)<br>set - 做了去重－红黑树(O(nlogn))<br>dict- 对key做了hash,再对hash进行红黑树 o(nlogn)</p>
-<h2 id="所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"><a href="#所以dict比set多了一步hash的过程，相比较来看，set的速度最快。" class="headerlink" title="所以dict比set多了一步hash的过程，相比较来看，set的速度最快。"></a>所以dict比set多了一步hash的过程，相比较来看，set的速度最快。</h2><p>上面提到了红黑树，那么我们就介绍一下红黑树<br>红黑树是在bst基础上衍生出来的，主要是解决bst插入过多点后的不平衡问题。<br>红黑树有几个特性：<br>1.根是黑的，叶子是黑的<br>2.红色节点的子节点是黑的<br>3.从任一节点到叶子节点的路径上黑色节点的个数是一样的。<br>然后当数据来插入的时候，通过自平衡调整，使得最长路径不会超过最短路径的两倍。</p>
-<hr>
-<p>常见需求<br>Dict:<br>1.如何根据值过滤掉元素<br>[k for k,v in dict.items() if v&gt;10]<br>第一部分是要存下来的值，items遍历查找<br>2.字典/counter的方法<br><img src="https://upload-images.jianshu.io/upload_images/14119097-ee3e6547e522d26c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="方法"></p>
-<p>List：<br>1.一个list呈现字典的形态，提取key和values?<br>使用zip() - unzip 可以提取<br>同样，如果想合并，可以用zip</p>
+        <h2 id="常规"><a href="#常规" class="headerlink" title="常规"></a>常规</h2><ul>
+<li><p>git add </p>
+</li>
+<li><p>git commit -m “”</p>
+</li>
+<li><p>git push</p>
+</li>
+</ul>
+<h2 id="情景1-把不想要的代码-commit到本地仓库了，但是没有push"><a href="#情景1-把不想要的代码-commit到本地仓库了，但是没有push" class="headerlink" title="情景1: 把不想要的代码 commit到本地仓库了，但是没有push"></a>情景1: 把不想要的代码 commit到本地仓库了，但是没有push</h2><p>在push前的</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
