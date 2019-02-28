@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>神经网络训练流程 | Hexo</title>
-  <meta name="keywords" content=" 最佳实践 , 神经网络 ">
-  <meta name="description" content="神经网络训练流程 | Hexo">
+  <title>ACE-CPT-(6)-第三部分（中） | Hexo</title>
+  <meta name="keywords" content=" ace ">
+  <meta name="description" content="ACE-CPT-(6)-第三部分（中） | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -401,9 +401,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-神经网络训练流程" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-ACE-CPT-6-第三部分-中" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">神经网络训练流程</h1>
+        <h1 class="article-title">ACE-CPT-(6)-第三部分（中）</h1>
     
     <div class="article-meta">
         
@@ -411,23 +411,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="算法">算法</a>
+            <a href="javascript:" data-rel="运动表现">运动表现</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">最佳实践</a>
-            
-            <a href="javascript:" class="color5">神经网络</a>
+            <a href="javascript:" class="color4">ace</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-05 20:32:44">2019-02-05 19:40</time>
+        创建时间:<time class="date" title="更新时间: 2019-02-28 08:53:21">2019-02-28 08:35</time>
         
     </div>
     <div class="article-meta">
@@ -449,7 +447,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#static-postural-assessment"><span class="toc-text">static postural assessment</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -464,20 +462,12 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最佳实践是能形成一个能不断优化的闭环反馈。神经网络的训练也需要遵循这一原则，希望能看到模型的效果，并且方便对模型进行调整并进一步观察效果。本篇文章不涉及数据的预处理，只讨论我认为的一个比较好的训练流程。</p>
-<p>流程：</p>
-<ol>
-<li><p>分割数据集</p>
-</li>
-<li><p>make batch:因为可能涉及到多个神经网络组合，所以需要把不同的神经网络的数据集准备到一起<br>可能会多一步iterate batch-生成batch</p>
-</li>
-<li><p>build model：这一步是完成模型的搭建和编译</p>
-</li>
-<li><p>model training:进行模型的训练</p>
-</li>
-<li><p>print metrics:主要用来看模型的表现，并进行相关部分的更新，形成闭环。</p>
-</li>
-</ol>
+        <p>干货来啦。</p>
+<p>Chapter7 </p>
+<p>这一章主要围绕着如何进行功能性评估。（体态、运动、核心、平衡和灵活性）。不管客户的目标是什么，都应该考虑activities of daily living(ADL)</p>
+<h2 id="static-postural-assessment"><a href="#static-postural-assessment" class="headerlink" title="static postural assessment"></a>static postural assessment</h2><p>体态就是身体各部分之间的alignment.通常依靠的是<strong>深层的肌肉</strong>，主要包括type1 muscle fibers的concentrations和控制基础等长收缩能力的功能。一个好的体态是肌肉、神经、关节可以有效的合作。所以从体态可以看出一些不良的习惯和关节之间潜在的不平衡。</p>
+<p>下面是一些常见的不良体态：</p>
+<p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/bad_posture.png" alt="不良体态"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
