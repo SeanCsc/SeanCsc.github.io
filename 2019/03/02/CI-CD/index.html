@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>ACE-CPT-(5)-人体系统 | Hexo</title>
-  <meta name="keywords" content=" ace ">
-  <meta name="description" content="ACE-CPT-(5)-人体系统 | Hexo">
+  <title>CI/CD | Hexo</title>
+  <meta name="keywords" content=" 技术总结 ">
+  <meta name="description" content="CI/CD | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="最爱小王">
@@ -419,9 +419,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ACE-CPT-5-人体系统" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-CI-CD" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">ACE-CPT-(5)-人体系统</h1>
+        <h1 class="article-title">CI/CD</h1>
     
     <div class="article-meta">
         
@@ -429,21 +429,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="运动表现">运动表现</a>
+            <a href="javascript:" data-rel="开发">开发</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">ace</a>
+            <a href="javascript:" class="color5">技术总结</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-19 23:40:22">2019-02-14 18:40</time>
+        创建时间:<time class="date" title="更新时间: 2019-03-04 18:50:33">2019-03-02 22:25</time>
         
     </div>
     <div class="article-meta">
@@ -480,7 +480,12 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这一部分是白书上的硬核知识点，有大量的复杂单词TT 我会先给出单词的列表，再给出知识点。</p>
+        <p>前几天跟之前实习组里的人聊天，谈到了几个和实习时候的变化，一个是我之前的mentor去了另一家裁员公司的一个比较坑的方向，给我的感受就是高手只关注机遇，如果能以自己的能力填上几个坑对公司和自己都是很大的收获。之前实习的时候，mentor经常说的一句话就是锦上添花没有用，有用的是雪中送炭。</p>
+<p>另一个变化就是之前实习时候做的一些模型尽管可以通过自动化得到需要的数据并配置，但是缺乏工程上的规模化。现在我们的策略都需要走cicd，我是第一次了解到这个词，就去补习了一下。</p>
+<p>首先来看什么是CI(continuous delivery),持续交付就是应用发布出去的过程。通过一个按键即可自动化实现部署上线，每隔一段时间发布一次。</p>
+<p>进阶的方式是持续部署CD,一个不同就是不再是人为的每隔一段时间就部署，而是当修改后就自动部署到生产线。</p>
+<p>所以和之前的方式有了哪些区别那？</p>
+<p>每天在配置策略时，需要调用命令行和shell文件以实现所谓的自动化，虽然可以设置定时任务自动跑，但是一旦服务器故障会造成很大的损失。但是如果通过cicd，我们要做的是配置容器服务，每次将修改后的代码提交到指定分支，自动部署，通过监控保持可用。一方面稳定性可以得到提升，另一方面可以更加专注于开发。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
