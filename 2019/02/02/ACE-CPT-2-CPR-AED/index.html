@@ -125,9 +125,9 @@
     
     <li data-rel="运动表现"> 运动表现 </li>
     
-    <li data-rel="生活"> 生活 </li>
-    
     <li data-rel="开发"> 开发 </li>
+    
+    <li data-rel="生活"> 生活 </li>
     
     <li data-rel="效率"> 效率 </li>
     
@@ -146,7 +146,7 @@
 
 
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="30">
+<input type="hidden" id="yelog_site_posts_number" value="31">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -177,19 +177,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">旅游</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">技术总结</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">速查</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -197,11 +185,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
+        <a href="javascript:" class="color3">速查</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hive</a>
+        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -213,6 +201,14 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">旅游</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">markdown</a>
     </li>
     
@@ -221,7 +217,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">shell</a>
+        <a href="javascript:" class="color4">git</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -233,6 +229,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">shell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">总结</a>
     </li>
     
@@ -241,11 +241,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">神经网络</a>
+        <a href="javascript:" class="color3">肌肉</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">肌肉</a>
+        <a href="javascript:" class="color5">神经网络</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -265,6 +265,11 @@
         <a id="top" class="" href="/2019/01/30/hello-world/" data-tag="" data-author="">
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-01-30 21:36:58">2019/01/30</span>
+        </a>
+        
+        <a class="运动表现 " href="/2019/03/10/ACE-CPT-9-第四部分/" data-tag="ace" data-author="">
+            <span class="post-title" title="ACE-CPT-(9)-第四部分">ACE-CPT-(9)-第四部分</span>
+            <span class="post-date" title="2019-03-10 23:01:20">2019/03/10</span>
         </a>
         
         <a class="运动表现 " href="/2019/03/04/ACE-CPT-8-第三部分（计划）/" data-tag="ace" data-author="">
@@ -317,7 +322,7 @@
             <span class="post-date" title="2019-02-19 23:24:43">2019/02/19</span>
         </a>
         
-        <a class="效率 " href="/2019/02/19/Python速查/" data-tag="速查,python" data-author="">
+        <a class="效率 " href="/2019/02/19/Python速查/" data-tag="python,速查" data-author="">
             <span class="post-title" title="Python速查">Python速查</span>
             <span class="post-date" title="2019-02-19 11:08:39">2019/02/19</span>
         </a>
@@ -342,7 +347,7 @@
             <span class="post-date" title="2019-02-08 11:24:41">2019/02/08</span>
         </a>
         
-        <a class="效率 " href="/2019/02/06/git速查/" data-tag="git,速查" data-author="">
+        <a class="效率 " href="/2019/02/06/git速查/" data-tag="速查,git" data-author="">
             <span class="post-title" title="git速查">git速查</span>
             <span class="post-date" title="2019-02-06 18:11:03">2019/02/06</span>
         </a>
@@ -533,7 +538,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#旅游','#技术总结','#git','#速查','#python','#hexo','#hive','#lolita','#love','#markdown','#数据结构','#shell','#前端','#化妆品','#总结','#最佳实践','#神经网络','#肌肉','#机器学习','#阅读笔记',],
+            'data': ['#ace','#技术总结','#python','#速查','#hexo','#lolita','#love','#hive','#旅游','#markdown','#数据结构','#git','#前端','#化妆品','#shell','#总结','#最佳实践','#肌肉','#神经网络','#机器学习','#阅读笔记',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
