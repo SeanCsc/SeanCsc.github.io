@@ -245,11 +245,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">旅游</a>
+        <a href="javascript:" class="color3">肌肉</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">肌肉</a>
+        <a href="javascript:" class="color3">旅游</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -492,7 +492,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-03-24 14:25:59">2019-02-01 20:50</time>
+        创建时间:<time class="date" title="更新时间: 2019-03-24 14:46:05">2019-02-01 20:50</time>
         
     </div>
     <div class="article-meta">
@@ -564,7 +564,14 @@
 </li>
 </ol>
 <p>3-24-2019</p>
-<h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2>
+<h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2><p>基于<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">hexo-blog-encrypt插件</a>。</p>
+<ol>
+<li>在hexo根目录的package.json中添加”hexo-blog-encrypt”: “1.1.*” 依赖</li>
+<li>执行npm install安装插件</li>
+<li>在_config.yml中可以设置是否启动</li>
+<li>在头部添加对应的password,abstract和message字段即可。</li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
     </div>
@@ -605,7 +612,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#ace','#技术总结','#private','#python','#速查','#hive','#git','#hexo','#lolita','#markdown','#数据结构','#shell','#前端','#化妆品','#总结','#最佳实践','#面试','#神经网络','#旅游','#肌肉','#机器学习','#阅读笔记',],
+            'data': ['#ace','#技术总结','#private','#python','#速查','#hive','#git','#hexo','#lolita','#markdown','#数据结构','#shell','#前端','#化妆品','#总结','#最佳实践','#面试','#神经网络','#肌肉','#旅游','#机器学习','#阅读笔记',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
