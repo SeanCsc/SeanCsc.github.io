@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>[阅读笔记]机器学习脉络和工程落地 | Hexo</title>
-  <meta name="keywords" content=" 机器学习 , 阅读笔记 ">
-  <meta name="description" content="[阅读笔记]机器学习脉络和工程落地 | Hexo">
+  <title>体态矫正 | Hexo</title>
+  <meta name="keywords" content=" 体态 ">
+  <meta name="description" content="体态矫正 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="最爱小王">
@@ -477,9 +477,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-阅读笔记-机器学习脉络和工程落地" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-体态矫正" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">[阅读笔记]机器学习脉络和工程落地</h1>
+        <h1 class="article-title">体态矫正</h1>
     
     <div class="article-meta">
         
@@ -487,23 +487,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="算法">算法</a>
+            <a href="javascript:" data-rel="运动表现">运动表现</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">机器学习</a>
-            
-            <a href="javascript:" class="color5">阅读笔记</a>
+            <a href="javascript:" class="color3">体态</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-02-16 21:21:44">2019-02-16 08:20</time>
+        创建时间:<time class="date" title="更新时间: 2019-04-12 07:39:50">2019-04-10 22:58</time>
         
     </div>
     <div class="article-meta">
@@ -525,7 +523,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习脉络梳理"><span class="toc-text">机器学习脉络梳理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何选择假设集合"><span class="toc-text">如何选择假设集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何从假设集合中选球"><span class="toc-text">如何从假设集合中选球</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#决策理论"><span class="toc-text">决策理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#该部分收获"><span class="toc-text">该部分收获</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工程能力"><span class="toc-text">工程能力</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#上交叉综合症"><span class="toc-text">上交叉综合症</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -540,24 +538,8 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文是源于张相於老师在CSDN的一次分享，之前被相於老师面试过，因为计算机的基础知识不扎实没有通过，看了很多他写的算法方面的文章，大部分是从工业界的角度出发，而且语言通俗易懂，相比于书本上的理论知识，能带来更多新奇实际的观点。这篇文章前半部分关注在机器学习的核心概念上，而不是具体算法的推导；后半部分是关于工程落地，在各种算法和框架层出不穷的今天，工程落地能力变得越来越重要。</p>
-<h2 id="机器学习脉络梳理"><a href="#机器学习脉络梳理" class="headerlink" title="机器学习脉络梳理"></a>机器学习脉络梳理</h2><p>在滴滴实习的时候，和老司机们的一个差距就是抽象问题的能力，我们平时做的算法题在工作中可能不会直接用到，但是如果我们能把工作中遇到的实际问题抽象出来，可能会发现一些算法的思想可以用来解决一部分问题或者说提高一部分效率。机器学习也是这样，看似繁多的算法其实也是可以进行核心抽取的。有一个例子可以很好地说明抽取核心的重要性，比如说如何把所有的叶子都抓到手里面，一种是树叶落一地一片一片捡，另一种方法是从根上把树整个拔起来。滴滴转正面试的时候，冰姐跟我说了她认为比较重要的一点就是在刚毕业的时候要<strong>打牢基础，不要着急</strong>，其实这和从根上去抓整个叶子脉络是相通的。</p>
-<p>在上学校的机器学习课的时候，做了很多的数学推导，其实机器学习大部分是统计学习，根据数据学出一套规则，根本来说，就是<strong>拟合数据</strong>。</p>
-<p>那么我们现在有了一堆数据了，该如何去拟合？一种是上帝视角，也就是所谓的生成式模型，我们要学的是<strong>数据的分布</strong>，有了这个上帝视角，我们甚至可以基于分布自动生成数据，比如朴素贝叶斯。但是大部分时候我们可能并不需要学到这么深，因为可能只是要解决一个简单的二分类问题，那么只需要知道判别的概率就行，这就是所谓的判别式模型。比如点击率模型，我们只是需要知道点击的概率有多大。拟合数据的过程：<strong>我们先选择一个假设集合，根据数据去从假设集合中去选取最合适的球</strong>。</p>
-<h3 id="如何选择假设集合"><a href="#如何选择假设集合" class="headerlink" title="如何选择假设集合"></a>如何选择假设集合</h3><p>知道了拟合数据的思路，接下来的问题是那我们怎么知道拟合地好不好呐。不仅仅是机器学习，在学习和工作中，我们都会去设立一个目标或者评价方法来衡量我们做的事情。我们进行机器学习的目的是基于已有的数据去实现对新数据的预测能力。所以泛化能力是关键。在我们选取合适的球的过程中，需要根据VC Dimension去衡量这个球选得怎么样。如果VC Dimension是N代表什么呐？代表给你N个点，对这N个点进行<strong>任意的</strong>红蓝染色，这个模型都可以把这两种颜色分开。那么现在比如我们有一个线性模型的假设空间，如果这个线性模型的维度是N,那么它的VC Dimension就是N+1。</p>
-<p>那这么说是不是拥有无穷维的线性模型就无敌了？当然不是，我们关注的点是在于其面对未知点时候的表现。所以error不仅仅包括你拟合的怎么样（bias)还有泛化能力怎么样（variance）再加上无法避免的噪声。那么机器学习的第二个核心就是<strong>平衡bias和variance</strong>，在具体的使用中就是用cross validation来评价。</p>
-<h3 id="如何从假设集合中选球"><a href="#如何从假设集合中选球" class="headerlink" title="如何从假设集合中选球"></a>如何从假设集合中选球</h3><p>一方面我们想要降低bias（loss function的目标+优化），另一方面我们希望降低variance（正则化限制模型复杂度+扩充训练数据）</p>
-<p>到这里，我们就知道了如何评价假设集合，如何去选球的思路，接下来是该具体怎么做，这就涉及到优化的方法了。一种是解析解，比如学的一元二次方程组的求根公式，但是这世间大部分的事情是没法统一成解析解的，所以另一种是用梯度法去逼近最优解，我们每次向着更好的方向前进。</p>
-<h3 id="决策理论"><a href="#决策理论" class="headerlink" title="决策理论"></a>决策理论</h3><p>那么现在我们有了具体的球了，知道了模型是什么，参数是什么。接下来到该怎么用这个模型。我们要分类，该怎么卡这一个阈值？我们要排序，该从高到低还是从低到高，大多数时候我们是拍脑袋决定。看完张老师的分享后才知道其实背后也有对应的理论支持。比如我们的CTR排序从高到低排，这个时候对应的结果是期望总点击数最大。那么分类阈值对应的是 <a href="https://zh.wikipedia.org/wiki/%E8%B4%9D%E5%8F%B6%E6%96%AF%E9%94%99%E8%AF%AF%E7%8E%87" target="_blank" rel="noopener">贝叶斯决策理论</a> ，根据不同错误所对应的代价切分。比如在滴滴实习时候分类热区和冷区，在不同的场景下对应的分错代价是不一样的，在运力有限的情况下，我们的目标是最大化运力，如果我们把冷区错误地分成了热区，那么司机可能会前往冷区面对无单可接的情况，相反，如果我们把热区错误地分成了冷区，但是可以保证真正的热区都被找到了，那么不会影响运力的最大化目标。这也是在分类中引入precision和recall指标的一个原因，真实场景下，只使用准确率来评价一个分类模型是远远不够的。</p>
-<h3 id="该部分收获"><a href="#该部分收获" class="headerlink" title="该部分收获"></a>该部分收获</h3><p>其实这篇分享讲的东西大部分都已经学过，但是这是一个很好的学习东西的思路，先建立MVP版本的骨骼，再填充肌肉，在工作中，骨骼往往是核心，抽象问题的过程就是搭建骨骼的过程，然后如果我们需要优化再针对相应的位置进行优化。<strong>现在反过来看，关于机器学习的大部分面试问题都可以映射到上述链条的某一环节上。</strong></p>
-<h2 id="工程能力"><a href="#工程能力" class="headerlink" title="工程能力"></a>工程能力</h2><blockquote>
-<p>算法工程师的重心在工程师</p>
-</blockquote>
-<p>相於老师分享的精华在这一部分，在实习的时候见识到了一件事情想起来很简单却要不断的去填坑的过程。</p>
-<p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/reality.jpg" alt="fig"></p>
-<p>在实习的时候参与了一部分的工程工作，但是这篇分享给了一个更高层面的视角去看待工程工作。工程工作可以分成离线工程和在线工程。这两种工程对性能的要求不一样。对于离线工程，应该支持快速、可维护、可规模化、可扩展地实现算法（有些官方话语），举个例子，其实在滴滴做的智能补贴和供需预测就是一个离线工程，首先是提取数据流的pipeline要搭建好，然后模型和决策分成几个文件具有对模型比较好的可拓展性，如果想修改预测部分可以只改对应的部分；补贴所依赖的预测也只需要修改入口即可。我理解的可维护就是代码结构清晰，然后可规模化更多地反映在速度和结构上（这一方面没有着重去考虑，所以不一定准确）</p>
-<p>离线系统主要就是关注pipline,逻辑复用和debug能力。</p>
-<p>但是对于在线系统来说就没那么简单了。如果我们做一个模型它是要上线的，比如推荐就需要一个实时的api去预测，那么核心就变成了<strong>高效、高可用、稳定</strong>。目前我比较缺乏在线系统的工程能力，相於老师推荐的方法是自己假想demo，然后加戏。比如爬一些垃圾邮件数据集，先离线训练模型；再做在线的模拟，比如给一个id，实时返回是否是垃圾邮件。做完后可以再考虑高并发情况如何加速。</p>
+        <h2 id="上交叉综合症"><a href="#上交叉综合症" class="headerlink" title="上交叉综合症"></a>上交叉综合症</h2><p><img src="https://github.com/SeanCsc/SeanCsc.github.io/raw/master/img/uppercross.jpg" alt="上交叉综合症"></p>
+<p>上交叉综合症是比较常见的一种不良体态，长时间的以不良姿势对着电脑很容易形成。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
