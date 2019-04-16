@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>阿拉斯加 | Hexo</title>
-  <meta name="keywords" content=" 旅游 ">
-  <meta name="description" content="阿拉斯加 | Hexo">
+  <title>scala基础 | Hexo</title>
+  <meta name="keywords" content=" scala , 基础 ">
+  <meta name="description" content="scala基础 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="最爱小王">
@@ -490,9 +490,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-阿拉斯加" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-scala基础" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">阿拉斯加</h1>
+        <h1 class="article-title">scala基础</h1>
     
     <div class="article-meta">
         
@@ -500,21 +500,23 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="生活">生活</a>
+            <a href="javascript:" data-rel="开发">开发</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">旅游</a>
+            <a href="javascript:" class="color1">scala</a>
+            
+            <a href="javascript:" class="color3">基础</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-04-07 22:44:14">2019-04-07 22:30</time>
+        创建时间:<time class="date" title="更新时间: 2019-04-15 23:10:05">2019-04-15 22:39</time>
         
     </div>
     <div class="article-meta">
@@ -536,7 +538,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#表达式"><span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#值"><span class="toc-text">值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类"><span class="toc-text">类</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -551,10 +553,25 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>夏季：冰攀，看虎鲸，北美最高峰Denali，美国最大的国家公园，直升机陆上和海上冰川，在熊之乐园观多熊捕鱼。</p>
-<p><a href="https://cn.dealmoon.com/guide/759348" target="_blank" rel="noopener">自驾攻略</a></p>
-<p><a href="http://sweethome1108.pixnet.net/blog/post/463635077-%5B%E9%98%BF%E6%8B%89%E6%96%AF%E5%8A%A0%5D-alaska-%E5%A4%8F%E5%AD%A3-%E5%AE%89%E5%85%8B%E6%8B%89%E6%B2%BB-%E4%B8%8D%E7%94%A8%E7%A7%9F%E8%BB%8A-5%E5%A4%A9" target="_blank" rel="noopener">参加tour不租车</a></p>
-
+        <p>这篇文章主要用来记录Scala的基本语法，会结合几篇教程，便于在工作中用到时可以找到相关部分。结合sbt console进行学习。</p>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><p>scala中（几乎）一切都是表达式</p>
+<h2 id="值"><a href="#值" class="headerlink" title="值"></a>值</h2><p>声明：<br>不变量 -  val<br>变量 -  var</p>
+<p>scala可以根据赋值的内容推算出变量的类型。</p>
+<p>访问数组使用的是()</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ol>
+<li>def创建，类似python。def addOne(m: Int): Int = m+1。冒号后面跟着该值的类型。<strong>type inference</strong>, scala中变量类型是放在参数和变量的后面，返回值的类型也是一样的。</li>
+</ol>
+<ol start="2">
+<li><p>匿名函数</p>
+</li>
+<li><p>可以使用{}格式化代码</p>
+</li>
+<li><p>partial application: 使用下划线表示不同上下文的不同事物，通常可以看作一个没有命名的通配符。</p>
+</li>
+<li><p>不需要return</p>
+</li>
+</ol>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达, 邮箱yzp319@163.com </span>
     </div>
